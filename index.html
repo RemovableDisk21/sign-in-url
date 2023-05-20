@@ -29,16 +29,16 @@
             <p class="lead">Welcome to Android Enterprise!</p>
             <p class="lead">To complete the device provisioning process, please click the button below.</p>
             <p class="lead">
-                <a target="_blank" href="https://enterprise.google.com/android/enroll?et=KCWDFBIDAUOMIUQCXPEZ"
-                    id="enrollment-token" class="btn btn-lg btn-light fw-bold border-white bg-white">COMPLETE DEVICE
+                <a target="_blank" id="enrollment-token"
+                    class="btn btn-lg btn-light fw-bold border-white bg-white">COMPLETE DEVICE
                     ENROLLMENT</a>
             </p>
         </div>
     </div>
     <script>
-        // const urlParamValues = new URLSearchParams(window.location.search);
-        // let enrollmentToken = document.getElementById('enrollment-token');
-        // enrollmentToken.href = `https://enterprise.google.com/android/enroll?et=${urlParamValues.get('token')}`;
+        const urlParamValues = new URLSearchParams(window.location.search);
+        let enrollmentToken = document.getElementById('enrollment-token');
+        enrollmentToken.href = `https://enterprise.google.com/android/enroll?et=${urlParamValues.get('token')}`;
     </script>
 </body>
 
