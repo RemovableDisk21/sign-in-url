@@ -41,7 +41,7 @@
         enrollmentToken.href = `https://enterprise.google.com/android/enroll?et=${urlParamValues.get('token')}`;
         let departmentName = urlParamValues.get('department');
         let department = document.getElementById('department');
-        if (departmentName != null || departmentName != "") {
+        if (departmentName != null && departmentName != "") {
             department.innerHTML = departmentName;
         }
     </script>
