@@ -39,9 +39,10 @@
         const urlParamValues = new URLSearchParams(window.location.search);
         let enrollmentToken = document.getElementById('enrollment-token');
         enrollmentToken.href = `https://enterprise.google.com/android/enroll?et=${urlParamValues.get('token')}`;
-
+        let departmentName = urlParamValues.get('department');
+        console.log(departmentName);
         let department = document.getElementById('department');
-        department.value = urlParamValues.get('department') != null || urlParamValues.get('department') != "" ? urlParamValues.get('department') : "Android Enterprise";
+        department.value = urlParamValues.get('department') != null ||  != "" ? urlParamValues.get('department') : "Android Enterprise";
     </script>
 </body>
 
